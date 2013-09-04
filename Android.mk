@@ -47,6 +47,9 @@ endif
 ifeq ($(TARGET_PRODUCT),cm_kumquat)
   LOCAL_CFLAGS += -DXPERIA_U
 endif
+ifeq ($(TARGET_PRODUCT),cm_nypon)
+  LOCAL_CFLAGS += -DXPERIA_P
+endif
 
 RECOVERY_VERSION := $(RECOVERY_NAME) v6.0.3.6
 

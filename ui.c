@@ -89,7 +89,11 @@ static const struct { gr_surface* surface; const char *name; } BITMAPS[] = {
 #ifdef XPERIA_GO
     { &gBackground,                "stitch_go" },
 #else
+#ifdef XPERIA_P
+    { &gBackground,                "stitch_p" },
+#else
     { &gBackground,                "stitch" },
+#endif
 #endif
     { NULL,                             NULL },
 };
@@ -745,6 +749,9 @@ void ui_init(void)
 #endif
 #if (defined XPERIA_U)
     __system("/sbin/setprop ro.build.product kumquat");
+#endif
+#if (defined XPERIA_P)
+    __system("/sbin/setprop ro.build.product nypon");
 #endif
 }
 
