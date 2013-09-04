@@ -645,6 +645,7 @@ wipe_data(int confirm) {
     }
     erase_volume("/sd-ext");
     erase_volume("/sdcard/.android_secure");
+    ui_set_background(BACKGROUND_ICON_CLOCKWORK);
     ui_print("Data wipe complete.\n");
 }
 
