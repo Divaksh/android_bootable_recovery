@@ -347,7 +347,7 @@ static void *progress_thread(void *cookie)
 
         // update the progress bar animation, if active
         // skip this if we have a text overlay (too expensive to update)
-        if (gProgressBarType == PROGRESSBAR_TYPE_INDETERMINATE && !show_text) {
+        if (gProgressBarType == PROGRESSBAR_TYPE_INDETERMINATE/* && !show_text*/) {
             redraw = 1;
         }
 
