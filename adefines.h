@@ -33,8 +33,8 @@
 #define GREEN_LED_FILE "/sys/devices/platform/nmk-i2c.2/i2c-2/2-0040/leds/pwr-green/brightness"
 #endif
 #ifdef XPERIA_SP
-#define RED_LED_FILE "/sys/devices/i2c-10/10-0047/leds/LED2_R/brightness"
-#define GREEN_LED_FILE "/sys/devices/i2c-10/10-0047/leds/LED2_G/brightness"
+#define RED_LED_FILE "/sys/devices/i2c-10/10-0047/leds/LED1_R/brightness"
+#define GREEN_LED_FILE "/sys/devices/i2c-10/10-0047/leds/LED1_G/brightness"
 #endif
 
 #endif
