@@ -1,7 +1,7 @@
 #ifndef ADEFINES_H
 #define ADEFINES_H
 
-#if !(defined XPERIA_GO || defined XPERIA_SOLA)
+#if !(defined XPERIA_GO || defined XPERIA_SOLA || defined XPERIA SP)
 #define HAVE_NOT_EXTERNAL_SDCARD
 #endif
 
@@ -11,9 +11,9 @@
 #define BOARD_UMS_LUNFILE_INT	"/sys/devices/virtual/android_usb/android0/f_mass_storage/lun/file"
 #endif
 
-#define BATTERY_LEVEL_FILE  "/sys/devices/platform/ab8500-i2c.0/ab8500-fg.0/power_supply/ab8500_fg/capacity"
-#define BATTERY_STATUS_CHARGING_FILE_USB  "/sys/devices/platform/ab8500-i2c.0/ab8500-charger.0/power_supply/ab8500_usb/online"
-#define BATTERY_STATUS_CHARGING_FILE_AC  "/sys/devices/platform/ab8500-i2c.0/ab8500-charger.0/power_supply/ab8500_ac/online"
+#define BATTERY_LEVEL_FILE  "/sys/devices/platform/msm_ssbi.0/pm8921-core/pm8921-charger/power_supply/battery/capacity"
+#define BATTERY_STATUS_CHARGING_FILE_USB  "/sys/devices/platform/msm_ssbi.0/pm8921-core/pm8921-charger/power_supply/usb/online"
+#define BATTERY_STATUS_CHARGING_FILE_AC  "/sys/devices/platform/msm_ssbi.0/pm8921-core/pm8921-charger/power_supply/pm8921-dc/online"
 
 /* ui.c */
 #define USB_STATE_FILE "/sys/class/android_usb/android0/state"
@@ -31,6 +31,10 @@
 #ifdef XPERIA_U
 #define RED_LED_FILE "/sys/devices/platform/nmk-i2c.2/i2c-2/2-0040/leds/pwr-red/brightness"
 #define GREEN_LED_FILE "/sys/devices/platform/nmk-i2c.2/i2c-2/2-0040/leds/pwr-green/brightness"
+#endif
+#ifdef XPERIA_SP
+#define RED_LED_FILE "/sys/devices/i2c-10/10-0047/leds/LED2_R/brightness"
+#define GREEN_LED_FILE "/sys/devices/i2c-10/10-0047/leds/LED2_G/brightness"
 #endif
 
 #endif
